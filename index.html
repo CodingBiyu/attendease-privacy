@@ -1,4 +1,3 @@
-<!-- File: attendease-privacy.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +16,6 @@
         --card-bg: #fff;
         --card-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
         --border-radius: 16px;
-        --icon-size: 1.5em;
       }
       html,
       body {
@@ -31,7 +29,7 @@
       .hero {
         background: linear-gradient(90deg, #7402ad 60%, #8a74f7 100%);
         color: #fff;
-        padding: 3rem 1rem 2rem 1rem;
+        padding: 3rem 1rem 2rem;
         text-align: center;
         border-bottom-left-radius: 40px;
         border-bottom-right-radius: 40px;
@@ -49,17 +47,12 @@
         justify-content: center;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       }
-      .hero-logo img {
-        width: 48px;
-        height: 48px;
-      }
       .hero-title {
         font-size: 2.5rem;
         font-weight: 700;
       }
       .hero-tagline {
         font-size: 1.2rem;
-        font-weight: 400;
         margin-bottom: 0.5rem;
         opacity: 0.9;
       }
@@ -69,19 +62,17 @@
       }
       .container {
         max-width: 1000px;
-        margin: -2rem auto 2rem auto;
-        padding: 2rem 2rem 1rem 2rem;
+        margin: -2rem auto 2rem;
+        padding: 2rem;
       }
-
       .toc {
         background: #fff;
         border-radius: var(--border-radius);
         box-shadow: var(--card-shadow);
-        padding: 1.5rem 2rem 1.2rem 2rem; /* match card padding */
+        padding: 1.5rem 2rem;
         margin-bottom: 2.5rem;
-        width: 100%; /* full width inside container */
+        width: 100%;
       }
-
       .toc-title {
         font-weight: 700;
         color: var(--primary);
@@ -112,9 +103,7 @@
         padding: 1rem 2.5rem;
         font-size: 1.05rem;
         line-height: 1.8;
-        width: 100%;
       }
-
       .card h2 {
         color: var(--primary);
         font-size: 1.3rem;
@@ -128,12 +117,22 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
       }
+      .logo-img {
+        width: 100%;
+        height: auto;
+        max-width: 48px;
+        max-height: 48px;
+        display: block;
+      }
     </style>
   </head>
   <body>
     <div class="hero">
       <div class="hero-logo">
-        <img src="./attendease logo purple updated.svg" alt="AttendEase Logo" />
+        <img
+          src="./attendease logo purple updated.svg"
+          alt="AttendEase Logo"
+          class="logo-img" />
       </div>
       <div class="hero-title">Privacy Policy</div>
       <div class="hero-tagline">
@@ -141,7 +140,7 @@
       </div>
       <div class="dates">
         <strong>Effective Date:</strong> 10/07/25 &nbsp;|&nbsp;
-        <strong>Last Updated:</strong> 10/07/25
+        <strong>Last Updated:</strong> 16/07/25
       </div>
     </div>
     <div class="container">
@@ -151,101 +150,142 @@
           <li><a href="#info">1. Information We Collect</a></li>
           <li><a href="#use">2. How We Use Your Information</a></li>
           <li><a href="#storage">3. Data Storage & Retention</a></li>
-          <li><a href="#security">4. Data Security</a></li>
-          <li><a href="#sharing">5. Sharing Your Information</a></li>
+          <li><a href="#sharing">4. Sharing Your Information</a></li>
+          <li><a href="#security">5. Data Security</a></li>
           <li><a href="#choices">6. Your Privacy Choices</a></li>
-          <li><a href="#changes">7. Changes to This Policy</a></li>
-          <li><a href="#contact">8. Contact Us</a></li>
+          <li><a href="#children">7. Children’s Privacy</a></li>
+          <li><a href="#thirdparty">8. Third-Party Services</a></li>
+          <li><a href="#changes">9. Changes to This Policy</a></li>
+          <li><a href="#contact">10. Contact Us</a></li>
         </ul>
       </nav>
-
       <section class="card" id="info">
         <h2>1. Information We Collect</h2>
         <ul>
           <li>
-            <strong>Camera Data:</strong> Used for QR code scanning only. Not
-            stored or shared.
+            <strong>Camera Data (Real-Time Only):</strong> AttendEase uses your
+            device's camera exclusively for QR code scanning during attendance
+            check-ins. No images or video are captured, stored, or transmitted.
           </li>
           <li>
-            <strong>Location Data:</strong> Collected at the time of attendance
-            to verify presence.
+            <strong>Location Data:</strong> Location is used once at the time of
+            check-in to confirm the student’s presence near the classroom. It is
+            not tracked continuously and is not stored beyond the check-in
+            event.
           </li>
           <li>
-            <strong>User Data:</strong> Name, university ID, and attendance
-            records.
+            <strong>SMS Data (OTP Only):</strong> We use
+            <code>RECEIVE_SMS</code> and <code>READ_SMS</code> permissions to
+            automatically detect One-Time Passwords (OTP) sent via SMS (e.g.,
+            from Twilio). OTPs are used solely for attendance verification. We
+            do not read, store, or access any other SMS messages. OTP content is
+            used only temporarily and is not logged or saved.
           </li>
           <li>
-            <strong>Device Info:</strong> Device type, OS version, crash logs
-            for debugging only.
+            <strong>User Information:</strong> Includes name, student ID, and
+            attendance status – usually pre-registered by your institution.
+          </li>
+          <li>
+            <strong>Device & Usage Information:</strong> Device type, OS
+            version, crash logs, and app usage diagnostics used to improve
+            performance and stability.
           </li>
         </ul>
       </section>
-
       <section class="card" id="use">
         <h2>2. How We Use Your Information</h2>
         <ul>
-          <li>Verify physical presence during attendance using QR and GPS.</li>
-          <li>Maintain attendance logs securely.</li>
-          <li>Notify users about successful check-ins or issues.</li>
-          <li>Improve app stability and performance using crash data.</li>
+          <li>Verify your physical presence using QR scanning and GPS</li>
+          <li>Confirm your identity with secure OTP-based check-ins</li>
+          <li>Store accurate attendance records for academic purposes</li>
+          <li>Diagnose issues and improve app performance</li>
+          <li>Ensure secure user access to dashboards and logs</li>
         </ul>
       </section>
-
       <section class="card" id="storage">
         <h2>3. Data Storage & Retention</h2>
         <ul>
+          <li>Most attendance checks are processed instantly and securely</li>
           <li>
-            All user data is stored securely in university or app admin
-            databases.
+            Student data is stored in the university’s or institution’s database
           </li>
-          <li>No data is shared with third parties or used for advertising.</li>
-          <li>Data is retained only for attendance record purposes.</li>
+          <li>OTP data is not stored</li>
+          <li>
+            Diagnostic and crash data is stored temporarily for performance
+            enhancement
+          </li>
+          <li>Users may request deletion of their data at any time</li>
         </ul>
       </section>
-
-      <section class="card" id="security">
-        <h2>4. Data Security</h2>
-        <ul>
-          <li>Secure HTTPS communication between app and server.</li>
-          <li>Authentication to access admin or student dashboards.</li>
-          <li>Limited access to stored attendance data.</li>
-        </ul>
-      </section>
-
       <section class="card" id="sharing">
-        <h2>5. Sharing Your Information</h2>
-        <p>We do not share your personal data with any third party except:</p>
+        <h2>4. Sharing Your Information</h2>
         <ul>
-          <li>University staff or admin for academic records</li>
-          <li>Legal authorities if required by law</li>
+          <li>
+            We do not sell or share your personal information with third parties
+          </li>
+          <li>
+            Data may be shared with authorized university staff or instructors
+          </li>
+          <li>Legal authorities, if required by law</li>
+          <li>Service providers involved in OTP delivery (e.g., Twilio)</li>
         </ul>
       </section>
-
+      <section class="card" id="security">
+        <h2>5. Data Security</h2>
+        <ul>
+          <li>HTTPS encryption for all communications</li>
+          <li>Secure backend access to dashboards</li>
+          <li>
+            Minimal data collection focused only on attendance verification
+          </li>
+          <li>
+            Access control to ensure only authorized users handle stored data
+          </li>
+        </ul>
+      </section>
       <section class="card" id="choices">
         <h2>6. Your Privacy Choices</h2>
         <ul>
-          <li>You may revoke location or camera access via device settings.</li>
           <li>
-            Request data removal by emailing us 
+            You may revoke camera, location, or SMS access through your phone
+            settings
           </li>
+          <li>
+            Note: disabling these may impact attendance check-in functionality
+          </li>
+          <li>Request data deletion by contacting us via email</li>
         </ul>
       </section>
-
-      <section class="card" id="changes">
-        <h2>7. Changes to This Policy</h2>
+      <section class="card" id="children">
+        <h2>7. Children’s Privacy</h2>
         <p>
-          We may update this Privacy Policy. Latest version will always be
-          available in-app or online.
+          AttendEase is designed for use in higher education institutions. It is
+          not intended for children under 13. We do not knowingly collect data
+          from users under that age.
         </p>
       </section>
-
-      <section class="card" id="contact">
-        <h2>8. Contact Us</h2>
+      <section class="card" id="thirdparty">
+        <h2>8. Third-Party Services</h2>
+        <ul>
+          <li>
+            We may use third-party services like Twilio for sending OTPs via SMS
+          </li>
+          <li>These services are governed by their own privacy policies</li>
+        </ul>
+      </section>
+      <section class="card" id="changes">
+        <h2>9. Changes to This Policy</h2>
         <p>
-          Have questions? Reach out to the AttendEase Team:<br />
-          📧 Email:
-          <a href="mailto:attendease.support@gmail.com">sitebiya@gmail.com</a
-          ><br />
+          This policy may be updated as needed. The most current version will
+          always be available in the app and on our website.
+        </p>
+      </section>
+      <section class="card" id="contact">
+        <h2>10. Contact Us</h2>
+        <p>
+          AttendEase Support Team<br />📧 Email:
+
+          <a href="mailto:sitebiya@gmail.com">sitebiya@gmail.com</a>
         </p>
       </section>
     </div>
